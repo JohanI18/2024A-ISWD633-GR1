@@ -4,7 +4,7 @@ Es un archivo único que contiene todos los programas, librerías, dependencias 
 
 
 ## ¿Cuál es la relación entre una imagen y un contenedor? 
-# COMPLETAR 
+Una imagen de Docker es como un programa o un archivo ejecutable, mientras que un contenedor es como un proceso en ejecución de ese programa.
 
 ![Imagen y contenedores](imagenes/imagenYcontenedores.JPG)
 ## Comandos para imágenes
@@ -24,13 +24,13 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
+docker pull hello-world
 
 **¿Qué es nginx**
-# COMPLETAR 
+NGINX es un servidor web de código abierto cononocido por su versatilidad dentro de este campo. Es conocido por su alta eficiencia, estabilidad y escalabilidad.
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
+docker pull nginx:alpine
 
 ### Listar imágenes
 
@@ -52,7 +52,7 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
+docker inspect hello-world
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
 # COMPLETAR
@@ -72,7 +72,7 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
-# COMPLETAR
+docker rmi hello-world
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  
