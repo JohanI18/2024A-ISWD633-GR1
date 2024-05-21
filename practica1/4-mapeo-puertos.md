@@ -14,8 +14,7 @@ Crear un contenedor a partir de la imagen nginx version alpine con el mapeo de p
 ```
 docker run -d -p 3000:80 nginx:alpine
 ```
-
-# COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:3000
+![Pantalla de acceso nginx](imagenes/nginxPantallaAcceso.png)
 
 ### Para mapear más de un puerto
 
