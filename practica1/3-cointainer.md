@@ -81,7 +81,10 @@ docker run -d --name srv-web3 nginx:alpine
 docker rm <nombre contenedor>
 ```
 Eliminar el contenedor que se creó a partir de la imagen hello-world 
-# COMPLETAR
+![Screenshot Docker Run](imagenes/DockerRm.png)
+```
+docker rm relaxed_matsumoto
+```
 
 Verificar que el contenedor que se eliminó
 ```
