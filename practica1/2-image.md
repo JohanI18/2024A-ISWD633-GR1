@@ -62,87 +62,9 @@ docker inspect hello-world
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
 ```
-[
-    {
         "Id": "sha256:d2c94e258dcb3c5ac2798d32e1249e42ef01cba4841c2234249495f87264ac5a",
-        "RepoTags": [
-            "hello-world:latest"
-        ],
-        "RepoDigests": [
-            "hello-world@sha256:266b191e926f65542fa8daaec01a192c4d292bff79426f47300a046e1bc576fd"
-        ],
-        "Parent": "",
-        "Comment": "buildkit.dockerfile.v0",
-        "Created": "2023-05-02T16:49:27Z",
-        "ContainerConfig": {
-            "Hostname": "",
-            "Domainname": "",
-            "User": "",
-            "AttachStdin": false,
-            "AttachStdout": false,
-            "AttachStderr": false,
-            "Tty": false,
-            "OpenStdin": false,
-            "StdinOnce": false,
-            "Env": null,
-            "Cmd": null,
-            "Image": "",
-            "Volumes": null,
-            "WorkingDir": "",
-            "Entrypoint": null,
-            "OnBuild": null,
-            "Labels": null
-        },
-        "DockerVersion": "",
-        "Author": "",
-        "Config": {
-            "Hostname": "",
-            "Domainname": "",
-            "User": "",
-            "AttachStdin": false,
-            "AttachStdout": false,
-            "AttachStderr": false,
-            "Tty": false,
-            "OpenStdin": false,
-            "StdinOnce": false,
-            "Env": [
-                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-            ],
-            "Cmd": [
-                "/hello"
-            ],
-            "ArgsEscaped": true,
-            "Image": "",
-            "Volumes": null,
-            "WorkingDir": "/",
-            "Entrypoint": null,
-            "OnBuild": null,
-            "Labels": null
-        },
-        "Architecture": "amd64",
-        "Os": "linux",
-        "Size": 13256,
-        "GraphDriver": {
-            "Data": {
-                "MergedDir": "/var/lib/docker/overlay2/930e56d1eb19b1c40d19f6cb7dd0eaaa644442250e37f7ad97c5af5594f7b0a6/merged",
-                "UpperDir": "/var/lib/docker/overlay2/930e56d1eb19b1c40d19f6cb7dd0eaaa644442250e37f7ad97c5af5594f7b0a6/diff",
-                "WorkDir": "/var/lib/docker/overlay2/930e56d1eb19b1c40d19f6cb7dd0eaaa644442250e37f7ad97c5af5594f7b0a6/work"
-            },
-            "Name": "overlay2"
-        },
-        "RootFS": {
-            "Type": "layers",
-            "Layers": [
-                "sha256:ac28800ec8bb38d5c35b49d45a6ac4777544941199075dff8c4eb63e093aa81e"
-            ]
-        },
-        "Metadata": {
-            "LastTagTime": "0001-01-01T00:00:00Z"
-        },
-        "Container": ""
-    }
-]
 ```
+El ID de la imaagen se esta generando a partir de SHA-256
 
 ### Filtrar imágenes
 
