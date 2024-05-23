@@ -1,2 +1,2 @@
-# COMPLETAR
+# MI APRENDIZAJE
 Antes de realizar la práctica, tenía un conocimiento básico de Docker y sus conceptos esenciales. Tras completar la tarea, he mejorado notablemente mi comprensión sobre la creación, gestión y configuración de contenedores Docker, así como sobre el ecosistema de Docker, incluyendo Docker CLI, Docker Compose y Docker Swarm. También aprendí a mapear puertos y a manejar volúmenes y redes en Docker, lo que refuerza mi capacidad para automatizar despliegues y asegurar la consistencia de aplicaciones en distintos entornos, beneficiando así mi desarrollo profesional.
