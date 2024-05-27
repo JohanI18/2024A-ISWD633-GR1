@@ -1,6 +1,6 @@
 # Variables de Entorno
-### ¿Qué son las variables de entorno
-# COMPLETAR
+### ¿Qué son las variables de entorno?
+Las variables de entorno son valores dinámicos utilizados por el sistema operativo y programas para configurar su comportamiento y ambiente de ejecución. Contienen información como rutas de directorios, configuraciones de idioma, etc. Pueden ser globales o locales y se configuran en el sistema operativo o por programas específicos. Son útiles para personalizar programas y scripts y proporcionar información sobre el entorno de ejecución.
 
 ### Para crear un contenedor con variables de entorno
 
@@ -10,9 +10,13 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 
 ### Crear un contenedor a partir de la imagen de nginx:alpine con las siguientes variables de entorno: username y role. Para la variable de entorno rol asignar el valor admin.
 
-# COMPLETAR
+```
+docker pull nginx:alpine
+docker run -d --name mi-nginx -e username=Johan -e role=admin nginx:alpine
+```
 
 # CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR
+![Imagen](imagenes/mi-nginxVarEntorno.png)
 
 ### Crear un contenedor con mysql:8 , mapear todos los puertos
 # COMPLETAR
