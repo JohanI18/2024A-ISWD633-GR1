@@ -19,16 +19,22 @@ docker run -d --name mi-nginx -e username=Johan -e role=admin nginx:alpine
 ![Imagen](imagenes/mi-nginxVarEntorno.png)
 
 ### Crear un contenedor con mysql:8 , mapear todos los puertos
-# COMPLETAR
+```
+docker pull mysql:8
+docker run -P -d --name mi-sql mysql:8
+```
 
 ### ¿El contenedor se está ejecutando?
-# COMPLETAR
+![Imagen](imagenes/mi-sqlStatus.png)
 
 ### Identificar el problema
-# COMPLETAR
+![Imagen](imagenes/mi-sqlError.png)
 
 ### Eliminar el contenedor creado con mysql:8 
-# COMPLETAR
+
+```
+docker rm mi-sql
+```
 
 ### Para crear un contenedor con variables de entorno especificadas
 - Portabilidad: Las aplicaciones se vuelven más portátiles y pueden ser desplegadas en diferentes entornos (desarrollo, pruebas, producción) simplemente cambiando el archivo de variables de entorno.
