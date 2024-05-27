@@ -26,9 +26,11 @@ docker run -P -d --name mi-sql mysql:8
 
 ### ¿El contenedor se está ejecutando?
 ![Imagen](imagenes/mi-sqlStatus.png)
+El contenedor no se esta ejecutando, tiene como estado Exited
 
 ### Identificar el problema
 ![Imagen](imagenes/mi-sqlError.png)
+el problema es que no se crearon las variables de entorno necesarias, por lo tanto dio un error y la ejecucion se termino de manera inmediata
 
 ### Eliminar el contenedor creado con mysql:8 
 
@@ -51,9 +53,14 @@ docker run -d --name <nombre contenedor> --env-file=<nombreArchivo>.<extensión>
 Es necesario especificar la ruta absoluta del archivo si este se encuentra en una ubicación diferente a la que estás ejecutando el comando docker run.
 
 ### Crear un contenedor con mysql:8 , mapear todos los puertos y configurar las variables de entorno mediante un archivo
-# COMPLETAR
 
-# CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR 
+![Imagen](imagenes/mi-sqlVarEntorno.png)
+
+```
+docker run -P -d --name mi-sql --env-file=mysql_env.env mysql:8
+```
+
+![Imagen](imagenes/mi-sqlVarEntornoComprobacion.png)
 
 ### ¿Qué bases de datos existen en el contenedor creado?
-# COMPLETAR
+![Imagen](imagenes/mi-sqlDATABASES)
