@@ -14,8 +14,6 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 docker pull nginx:alpine
 docker run -d --name mi-nginx -e username=Johan -e role=admin nginx:alpine
 ```
-
-# CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR
 ![Imagen](imagenes/mi-nginxVarEntorno.png)
 
 ### Crear un contenedor con mysql:8 , mapear todos los puertos
@@ -30,7 +28,7 @@ El contenedor no se esta ejecutando, tiene como estado Exited
 
 ### Identificar el problema
 ![Imagen](imagenes/mi-sqlError.png)
-el problema es que no se crearon las variables de entorno necesarias, por lo tanto dio un error y la ejecucion se termino de manera inmediata
+El problema es que no se crearon las variables de entorno necesarias, por lo tanto dio un error y la ejecucion se termino de manera inmediata
 
 ### Eliminar el contenedor creado con mysql:8 
 
