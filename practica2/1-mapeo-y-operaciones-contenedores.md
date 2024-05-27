@@ -46,7 +46,7 @@ ls: Es el comando básico para listar archivos y directorios en un sistema de ar
 ```
 docker exec mi-jenkins ls -l  
 ```
-jenkins_ls-la.png
+
 ![Imagen](imagenes/jenkins_ls-la.png)
 
 ### Para ejecutar un shell interactivo en un contenedor de Docker especificado.
