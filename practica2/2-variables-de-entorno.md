@@ -63,4 +63,4 @@ docker run -P -d --name mi-sql --env-file=mysql_env.env mysql:8
 ![Imagen](imagenes/mi-sqlVarEntornoComprobacion.png)
 
 ### ¿Qué bases de datos existen en el contenedor creado?
-![Imagen](imagenes/mi-sqlDATABASES)
+![Imagen](imagenes/mi-sqlDATABASES.png)
