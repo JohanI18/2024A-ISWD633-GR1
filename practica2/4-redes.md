@@ -50,8 +50,110 @@ docker network ls
 
 ![Imagen](imagenes/esquema-ejercicio-redes.PNG)
 
+Creacion de las redes
+
+```
+docker network create net-curso01 -d bridge
+```
+
+```
+docker network create net-curso02 -d bridge
+```
+
+Creacion de los contenedores
+
+```
+docker run -d --name contenedor_1 nginx:alpine
+```
+
+```
+docker run -d --name contenedor_2 nginx:alpine
+```
+
+```
+docker run -d --name contenedor_3 nginx:alpine
+```
+
+```
+docker run -d --name contenedor_4 nginx:alpine
+```
+Conectar los contenedores a sus respectivas redes
+
+```
+docker network connect net-curso01 contenedor_1
+```
+
+```
+docker network connect net-curso01 contenedor_2
+```
+
+```
+docker network connect net-curso01 contenedor_3
+```
+
+```
+docker network connect net-curso02 contenedor_3
+```
+
+```
+docker network connect net-curso02 contenedor_4
+```
+
 # COLOCAR UNA CAPTURA DE LAS REDES EXISTENTES CREADAS
+
+![Imagen](imagenes/redes.png)
 
 # COLOCAR UNA(S) CAPTURAS(S) DE LOS CONTENEDORES CREADOS EN DONDE SE EVIDENCIE A QUÉ RED ESTÁN VINCULADOS
 
-# Eliminar las redes cre
+Para poder ver los contenedores y las redes a las que estan vinculados, como conocemos a las redes a las que hemos conectado usaremos los siguientes comandos para poder ver los contenedores que esten conectados a esa red
+
+```
+docker network inspect net-curso01
+```
+
+![Imagen](imagenes/red01.png)
+
+```
+docker network inspect net-curso02
+```
+
+![Imagen](imagenes/red02.png)
+
+# Eliminar las redes creadas
+
+Para eliminar las redes primero debemos desconectar los contenedores que esten conectados
+
+```
+docker network disconnect net-curso01 contenedor_1
+```
+
+```
+docker network disconnect net-curso01 contenedor_2
+```
+
+```
+docker network disconnect net-curso01 contenedor_3
+```
+
+```
+docker network disconnect net-curso02 contenedor_3
+```
+
+```
+docker network disconnect net-curso02 contenedor_4
+```
+
+Unas vez que las redes esten "vacias" procedemos a eliminar las redes
+
+```
+docker network rm net-curso01
+```
+
+```
+docker network rm net-curso02
+```
+
+comprobamos que las redes se eliminaron exitosamente listando las redes existentes
+
+![Imagen](imagenes/redesEliminadas.png)
+
