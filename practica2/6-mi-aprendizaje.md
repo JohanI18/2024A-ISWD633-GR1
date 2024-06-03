@@ -1,3 +1,2 @@
 # COMPLETAR  
-Comparando sus conocimientos antes de hacer la práctica con sus conocimientos después de hacer la tarea, explicar los principales aprendizajes logrados para beneficio de su formación profesional.  
-Si solucionó un problema presentado al realizar la práctica también se debe documentar.
+La sesión proporcionó una comprensión integral de la creación, configuración y gestión de contenedores Docker para aplicaciones de base de datos y web. Se destacó la importancia de configurar redes Docker para la comunicación segura entre contenedores. Además, se exploraron aspectos clave de la gestión de redes Docker, incluyendo la desconexión de contenedores y la eliminación de redes sin afectar los contenedores activos.
