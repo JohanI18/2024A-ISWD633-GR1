@@ -6,14 +6,17 @@ docker run -d --name mi_postgres --network mi_red -e POSTGRES_PASSWORD=password1
 ```
 
 ### Crear un cliente de postgres. Usar la imagen: dpage/pgadmin4
+
 ```
 docker run -d --name mi_pgadmin --network mi_red -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=admin -p 80:80 dpage/pgadmin4
 ```
 
-pagina web de http://localhost
+Pagina web de http://localhost
+
 ![Imagen](imagenes/localhost.png)
 
 La figura presenta el esquema creado en donde los puertos son:
+
 ![Imagen](imagenes/Puertos.png)
 - a: 80
 - b: 443
@@ -35,16 +38,19 @@ La figura presenta el esquema creado en donde los puertos son:
 ### Conectarse a la base de datos info
 
 Acceder al contenedor
+
 ```
 docker exec -it mi_postgres /bin/bash
 ```
 
 Conectarse al PostgreSQL
+
 ```
 psql -U postgres
 ```
 
 Acceder a la base de datos
+
 ```
 \c info
 ```
@@ -53,4 +59,4 @@ Acceder a la base de datos
 
 ### Realizar un select *from personas
 
-![Imagen](imagenes/select.png)
+![Imagen](imagenes/Select.png)
