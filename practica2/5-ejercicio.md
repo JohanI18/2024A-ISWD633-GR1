@@ -31,28 +31,46 @@ De acuerdo con el trabajo realizado, en la el esquema de ejercicio el puerto a e
 
 Ingresar desde el navegador al wordpress y finalizar la configuración de instalación.
 
-![Imagen](imagenes/wordpressConf1.PNG)
+![Imagen](imagenes/wordpressConf1.png)
 
-![Imagen](imagenes/wordpressConf2.PNG)
+![Imagen](imagenes/wordpressConf2.png)
 
-![Imagen](imagenes/wordpressConf3.PNG)
+![Imagen](imagenes/wordpressConf3.png)
 
 Desde el panel de admin: cambiar el tema y crear una nueva publicación.
+
+Cambio del tema
+
+![Imagen](imagenes/temaBefore.png)
+
+![Imagen](imagenes/temaAfter.png)
+
+Creacion de la publicacion
+
+![Imagen](imagenes/publicacion.png)
+
 Ingresar a: http://localhost:9300/ 
 recordar que a es el puerto que usó para el mapeo con wordpress
-# COLOCAR UNA CAPTURA DEL SITO EN DONDE SEA VISIBLE LA PUBLICACIÓN.
+
+![Imagen](imagenes/publicacionvisual.png)
 
 ### Eliminar el contenedor wordpress
-# COMPLETAR
+
+```
+docker rm -f wordpress
+```
 
 ### Crear nuevamente el contenedor wordpress
+
+```
+docker run -d --name mi_mysql --network net-wp -e MYSQL_ROOT_PASSWORD=rootpassword -e MYSQL_DATABASE=mi_base_de_datos -e MYSQL_USER=usuario -e MYSQL_PASSWORD=contraseña mysql:8
+```
+
 Ingresar a: http://localhost:9300/ 
 recordar que a es el puerto que usó para el mapeo con wordpress
 
+![Imagen](imagenes/wordpressRenovada.png)
+
 ### ¿Qué ha sucedido, qué puede observar?
-# COMPLETAR
 
-
-
-
-
+Podemos observar que la pagina web a mantenido la configuracion que hemos creado, el estilo y la publicacion nueva, esto puede ser debido a que esta informacion se guardo en el servidor mi_mysql y el contenedor de wordpress solamente seria la interfaz en la que se muestra lo del otro servidor
