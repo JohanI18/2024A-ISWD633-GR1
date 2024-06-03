@@ -24,13 +24,18 @@ docker pull wordpress
 ```
 
 ```
-docker run -d --name wordpress --network net-wp -e WORDPRESS_DB_HOST=mi_mysql:3306 -e WORDPRESS_DB_NAME=wordpress -e WORDPRESS_DB_USER=wp_user -e WORDPRESS_DB_PASSWORD=wp_password123 -p 8080:80 wordpress
+docker run -d --name wordpress --network net-wp -e WORDPRESS_DB_HOST=mi_mysql:3306 -e WORDPRESS_DB_NAME=mi_base_de_datos -e WORDPRESS_DB_USER=usuario -e WORDPRESS_DB_PASSWORD=contraseña -p 8080:80 wordpress
 ```
 
 De acuerdo con el trabajo realizado, en la el esquema de ejercicio el puerto a es **8080**
 
 Ingresar desde el navegador al wordpress y finalizar la configuración de instalación.
-# COLOCAR UNA CAPTURA DE LA CONFIGURACIÓN
+
+![Imagen](imagenes/wordpressConf1.PNG)
+
+![Imagen](imagenes/wordpressConf2.PNG)
+
+![Imagen](imagenes/wordpressConf3.PNG)
 
 Desde el panel de admin: cambiar el tema y crear una nueva publicación.
 Ingresar a: http://localhost:9300/ 
