@@ -100,8 +100,6 @@ _La instalación puede tomar varios minutos, mientras espera realice un diagrama
 
 ![Imagen](imagenes/drawio.png)
 
-# COMPLETAR CON EL DIAGRAMA SOLICITADO
-
 ### Eliminar un volumen específico
 ```
 docker volume rm <nombre volumen>
