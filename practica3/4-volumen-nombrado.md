@@ -20,7 +20,12 @@ Por ejemplo, en Windows las unidades de almacenamiento (como `C:`, `D:`, etc.) a
 Cuando creas un volumen nombrado, Docker asigna un punto de montaje específico en el sistema de archivos del host para ese volumen.
 
 ### ¿Cuál es el Mountpoint de vol-postgres?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+
+![Imagen](imagenes/volumen.png)
+
+```
+/var/lib/docker/volumes/vol-postgres/_data
+```
 
 ### Estructura del Punto de Montaje:
 - /var/lib/docker/volumes/: Es la ubicación base donde Docker almacena todos los volúmenes en el sistema de archivos del host.
@@ -37,27 +42,63 @@ docker run -d --name <nombre contenedor> -v <nombre volumen>:<ruta contenedor> <
 ```
 
 ### Crear la red net-drupal de tipo bridge
-# COMPLETAR CON EL COMANDO
+
+```
+docker network create --driver bridge net-drupal
+```
 
 ### Crear un servidor postgres vinculado a la red net-drupal, completar la ruta del contenedor
 docker run -d --name server-postgres -e POSTGRES_DB=db_drupal -e POSTGRES_PASSWORD=12345 -e POSTGRES_USER=user_drupal -v vol-postgres:<ruta contenedor> --network net-drupal postgres
 _No es necesario exponer el puerto, debido a que nos vamos a conectar desde la misma red de docker_
 
+![Imagen](imagenes/server-postgres.png)
+
+
 ### Crear un cliente postgres vinculado a la red drupal a partir de la imagen dpage/pgadmin4, completar el correo
 docker run -d --name client-postgres --publish published=9500,target=80 -e PGADMIN_DEFAULT_PASSWORD=54321 -e PGADMIN_DEFAULT_EMAIL=<correo> --network net-drupal dpage/pgadmin4
 
+![Imagen](imagenes/pgadmin4.png)
+
 ### Usar el cliente postgres para conectarse al servidor postgres, para la conexión usar el nombre del servidor en lugar de la dirección IP.
 
+Abre pgAdmin4 en tu navegador:
+  Ve a http://localhost:9500 y accede con el correo johan.illicachi@epn.edu.ec y la contraseña 54321.
+
+Agrega un nuevo servidor en pgAdmin4:
+
+En la pestaña General, ingresa un nombre para el servidor, por ejemplo, server-postgres.
+
+En la pestaña Connection, completa los campos de la siguiente manera:
+  Host name/address: server-postgres (el nombre del contenedor del servidor PostgreSQL).
+  Port: 5432 (el puerto por defecto de PostgreSQL).
+  Maintenance database: db_drupal (el nombre de la base de datos que especificaste al crear el contenedor).
+  Username: user_drupal (el usuario que especificaste al crear el contenedor).
+  Password: 12345 (la contraseña que especificaste al crear el contenedor).
+
+Una vez cumplido estos pasos tendremos acceso al servidor postgres
+
+![Imagen](imagenes/accesoPostgres.png)
+
 ### Crear los volúmenes necesarios para drupal, esto se puede encontrar en la documentación
-### COMPLETAR CON LOS COMANDOS
+
+```
+docker volume create vol-drupal-modules
+docker volume create vol-drupal-profiles
+docker volume create vol-drupal-themes
+```
 
 ### Crear el contenedor server-drupal vinculado a la red, usar la imagen drupal, y vincularlo a los volúmenes nombrados
 docker run -d --name server-drupal --publish published=9700,target=80 -v <nombre volumen>:<ruta contenedor> -v <nombre volumen>:<ruta contenedor> -v <nombre volumen>:<ruta contenedor> -v <nombre volumen>:<ruta contenedor> --network net-drupal drupal
 
+![Imagen](imagenes/drupal-server.png)
+
 ### Ingrese al server-drupal y siga el paso a paso para la instalación.
-# COMPLETAR CON UNA CAPTURA DE PANTALLA DEL PASO 4
+
+![Imagen](imagenes/drupal4.png)
 
 _La instalación puede tomar varios minutos, mientras espera realice un diagrama de los contenedores que ha creado en este apartado._
+
+![Imagen](imagenes/drawio.png)
 
 # COMPLETAR CON EL DIAGRAMA SOLICITADO
 
