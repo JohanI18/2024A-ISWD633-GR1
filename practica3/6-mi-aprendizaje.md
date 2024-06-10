@@ -1,3 +1,1 @@
-# COMPLETAR  
-Comparando sus conocimientos antes de hacer la práctica con sus conocimientos después de hacer la tarea, explicar los principales aprendizajes logrados para beneficio de su formación profesional.  
-Si solucionó un problema presentado al realizar la práctica también se debe documentar.
+Realizar esta práctica me ayudó a consolidar mis habilidades en Docker y a aprender nuevas técnicas para manejar volúmenes y redes de manera más efectiva. Aprendí la importancia de la práctica meticulosa y la atención a los detalles en la configuración de contenedores y volúmenes, lo cual es crucial para el despliegue exitoso de aplicaciones en entornos de contenedores. Estos conocimientos son extremadamente útiles para mi formación profesional en el campo de la administración de sistemas y el desarrollo de aplicaciones distribuidas.
